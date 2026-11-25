@@ -1,0 +1,32 @@
+{
+  "$schema_version": 1,
+  "name": "srs-ag16-security-design",
+  "version": "1.0.0",
+  "node_id": "AG-16",
+  "kind": "agent",
+  "summary": "Agent Node AG-16 (pha Thiết kế SOP): thiết kế an ninh/ATTT (TL-09) từ NFR bảo mật AG-11 + data_permissions AG-10 — tài sản, mô hình đe dọa STRIDE, RBAC, bảo vệ dữ liệu, audit, gia cố; không khẳng định nghĩa vụ pháp lý.",
+  "repository": "https://github.com/HaNguyen1409/srs-ag16-security-design",
+  "license": "MIT",
+  "interface": {
+    "contract": "SKILL.md — đầu vào/đầu ra là tài liệu Markdown/JSON mô tả trong skill; không gọi trực tiếp skill khác",
+    "output_artifact": null,
+    "sop_steps": [
+      {
+        "step": "29",
+        "title": "Thiết kế an ninh/ATTT (TL-09)",
+        "type": "Agent",
+        "receives_from": "B19, B18, B26",
+        "sends_to": "B30"
+      }
+    ]
+  },
+  "upstream": {
+    "srs-ag11-nfr-spec": "^1.0.0",
+    "srs-ag10-functional-spec": "^1.0.0",
+    "srs-ag14-data-design": "^1.0.0",
+    "srs-ag13-architecture-design": "^1.0.0"
+  },
+  "downstream": [],
+  "orchestrates": {},
+  "runtime": null
+}
